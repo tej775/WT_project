@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technozion - Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: white;
+            overflow: hidden;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            /* background: black; */
+            background:rgb(33, 53, 85);
+            background:#09122C;
+            /* background:rgb(7, 79, 87); */
+        }
+        header {
+            /* position: absolute; */
+            width: 100%;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 20px;
+            z-index: 10;
+            /* background: rgba(0, 0, 0, 0.8); */
+        }
+        .hero {
+           
+            position: relative;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            z-index: 10;
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin: 0;
+            color: cyan;
+            text-shadow: 0 0 10px cyan;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .register-form{
+            position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                /* border: 1px solid cyan;
+                width:max-content */
+        }
+        .register-form h3{
+            font-size: 24px;
+        }
+        .register-form input::placeholder{
+            color:rgba(245, 245, 245, 0.822);
+        }
+        .registe-form {
+            
+             position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(0, 0, 0, 0.7);
+                background-color: rgba(255, 255, 255, 0.514);
+                /* background-color:#872341; */
+                border-radius: 10px;
+            padding: 30px;
+             width: 300px;
+            /* box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); */
+            box-shadow:0px 0px 10px rgb(245, 239, 231);
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-left:10px;
+            
+
+
+/*             
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            width: 300px;
+           
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            z-index: 20; */
+        }
+        .register-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid cyan;
+    /* border: rgb(62, 88, 121); */
+    border-radius: 5px;
+    font-size: 16px;
+    color:white;
+    background: rgba(0, 255, 255, 0.1);
+    /* background-color: #DAD2FF; */
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.register-form input:focus {
+    background: rgba(0, 255, 255, 0.3);
+    border-color: white;
+    color: white;
+    box-shadow: 0 0 10px cyan;
+}
+.register-form .password-container {
+            position: relative;
+            width: 100%;
+        }
+        .register-form .password-container input {
+            width: 100%;
+           
+        }
+        .register-form .password-container .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: cyan; /* Set the icon color to cyan */
+            font-size: 16px; /* Adjust icon size */
+        }
+
+        .register-form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: black;
+        } 
+       
+        .register-form button {
+            width: fit-content;
+            background: cyan;
+            /* background-color: #FFF2AF; */
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            cursor: pointer;
+           padding:10px 20px;
+            transition: transform 0.3s ease;
+
+        }
+        .register-form button:hover {
+            transform: scale(1.05);
+            /* background: white; */
+            
+            color: black;
+        }
+        .register-form button:active{
+            background: rgba(0, 255, 255, 0.3);
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 30px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .register-form {
+                width: 60%;
+            }
+
+        }
+        .custom-alert {
+            display: none;
+            position: fixed;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* background: #16404d; */
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            font-weight: bold;
+            z-index: 1000;
+        }
+        .input-container {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+.custom-alert::before,
+.custom-alert::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid cyan;
+}
+
+.custom-alert::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+
+.custom-alert::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+
+
+   
+
+.register-form input:hover {
+    border-color: white;
+    background: rgba(0, 255, 255, 0.2);
+   box-shadow: 0 0 15px cyan;
+    transform: scale(1.02); /* Slight expansion effect */
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <!-- <header>
+        Technozion - The Annual Tech Fest of NIT Warangal
+    </header> -->
+    <div class="hero">
+        <h1>Login</h1>
+        <!-- <p>8th - 10th Nov | Don't Miss the Future of Technology</p> -->
+        <div class="register-form">
+            <h3>Login Form</h3>
+            <form action="#" method="POST"  onsubmit="return validateForm()">
+                <input type="text" name="name" id="name" placeholder="Full Name" required>
+                <input type="email" name="email" id="email" placeholder="Email Address" required>
+                <div class="password-container">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <span class="toggle-password" onclick="togglePassword()"><i style="color:cyan" class="fa-regular fa-eye"></i></span>
+            </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <div id="customAlert" class="custom-alert"></div>
+    <script>
+        function showAlert(message) {
+            var alertBox = document.getElementById("customAlert");
+            alertBox.textContent = message;
+            alertBox.style.display = "block";
+            setTimeout(function() { alertBox.style.display = "none"; }, 3000);
+        }
+         function togglePassword() {
+            var passwordField = document.getElementById("password");
+            if (passwordField.type === "password" && passwordField.value.trim().length>0) {
+                passwordField.type = "text";
+                
+                document.querySelector('.toggle-password').innerHTML = "<i class='fa-regular fa-eye-slash'></i>"
+            } else {
+                passwordField.type = "password";
+                document.querySelector('.toggle-password').innerHTML = "<i class='fa-regular fa-eye'></i>"
+            }
+        }
+
+        function validateForm() {
+            // Name validation: Length should be greater than 3
+            var name = document.getElementById("name").value;
+            if (name.length <= 3) {
+                showAlert("Name should be longer than 3 characters.");
+                return false;
+            }
+
+            // Email validation: Should match "n{6 digits}@rguktn.ac.in"
+            var email = document.getElementById("email").value;
+            var emailRegex = /^[nN]\d{6}@rguktn\.ac\.in$/;
+            if (!emailRegex.test(email)) {
+                showAlert("Email must start with 'n' or 'N', followed by 6 digits, and end with @rguktn.ac.in");
+                return false;
+            }
+
+            // If all validations pass, return true to submit the form
+            return true;
+        }
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 100 },
+                "size": { "value": 3 },
+                "move": { "speed": 2 },
+                "line_linked": { "enable": true, "color": "#808080" },
+                "color": { "value": "#ffffff" },
+                "interactivity": {
+                    "events": {
+                        "onhover": { "enable": true, "mode": "repulse" },
+                        "onclick": { "enable": true, "mode": "push" }
+                    }
+                }
+            }
+        });
+        // https://colorhunt.co/palette/7c444f9f5255e16a54f39e60
+    </script>
+</body>
+</html>
