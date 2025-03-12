@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technozion - Cultural Events</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #09122C;
+            color: white;
+            overflow: hidden;
+        }
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            background: rgba(0, 255, 255, 0.3);
+            padding: 15px;
+            gap: 20px;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background: #09122C;
+        }
+        header {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 60px 20px 20px;
+            z-index: 100;
+            /* background: rgba(0, 255, 255, 0.2); */
+            color: cyan;
+            text-shadow: 0 0 10px cyan;
+            margin-bottom: 0;
+            position: relative;
+            top:50px;
+        }
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .nav-bar a:hover {
+            background: cyan;
+            color: black;
+        }
+        .container {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            z-index: 10;
+            margin-top: 80px;
+        }
+        .event {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            border: 2px solid cyan;
+            box-shadow: 0 0 10px cyan, inset 0 0 10px cyan;
+        }
+        .event:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px cyan, inset 0 0 15px cyan;
+        }
+        .event img {
+            width: 30%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+            margin-right: 20px;
+        }
+        .event-content {
+            flex: 1;
+        }
+        .button-group {
+            display: flex;
+            gap: 15px;
+        }
+        .register, .previous-events {
+            display: inline-block;
+            padding: 12px 18px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            border: 2px solid cyan;
+            background: transparent;
+            color: cyan;
+        }
+        .register:hover, .previous-events:hover {
+            background: cyan;
+            color: black;
+            box-shadow: 0 0 10px cyan, 0 0 40px cyan;
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .event {
+                flex-direction: column;
+                text-align: center;
+            }
+            .event img {
+                width: 100%;
+                margin: 0 0 15px 0;
+            }
+            .button-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <nav class="nav-bar">
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </nav>
+    <header>
+        <marquee  direction="left">Cultural Events</marquee></header>
+    <div class="container">
+        <div class="event">
+            <img src="music-festival.jpg" alt="Music Festival">
+            <div class="event-content">
+                <h2>Cygnus 2025</h2>
+                <p>Annual cultural extravaganza at IIIT Nuzvid.</p>
+                <p>Experience an electrifying night of music, dance, and entertainment.</p>
+                <div class="button-group">
+                    <a href="#" class="register">Register Now</a>
+                    <a href="#" class="previous-events">View Previous Events</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 100 },
+                "size": { "value": 3 },
+                "move": { "speed": 2 },
+                "line_linked": { "enable": true, "color": "#808080" },
+                "color": { "value": "#ffffff" }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": false },
+                    "onclick": { "enable": true, "mode": "push" }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
