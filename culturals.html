@@ -307,7 +307,7 @@
 
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -438,7 +438,7 @@
 
     <div id="particles-js"></div>
 
-    <!-- Navigation Bar -->
+   
     <div class="navbar">
         <a href="#">Home</a>
         <a href="events.html">Events</a>
@@ -494,6 +494,460 @@
                 "move": { "speed": 2 },
                 "line_linked": { "enable": true, "color": "#00ffff" },
                 "color": { "value": "#00ffff" },
+                "interactivity": {
+                    "events": {
+                        "onhover": { "enable": true, "mode": "repulse" },
+                        "onclick": { "enable": true, "mode": "push" }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html> -->
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Events - IIIT Nuzvid</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: black;
+            z-index: -1;
+        }
+
+        .navbar {
+            background: rgba(0, 255, 255, 0.2);
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar a {
+            color: cyan;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            min-height: 100vh;
+            padding: 100px 0 50px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: cyan;
+            text-shadow: 0 0 15px cyan;
+            margin-bottom: 30px;
+        }
+
+        .event {
+            background: url('circuit-bg.jpg') no-repeat center center/cover;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .event h2 {
+            color: cyan;
+            text-shadow: 0 0 10px cyan;
+        }
+
+        .event p {
+            font-size: 16px;
+            color: white;
+        }
+
+        .button-container {
+            margin-top: 15px;
+        }
+
+        /* Cyberpunk-style Disabled Register Button */
+        .register-btn {
+            background: linear-gradient(45deg, #222, #444);
+            color: #666;
+            cursor: not-allowed;
+            opacity: 0.7;
+            border: 2px solid #00ffff55;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+            text-transform: uppercase;
+            width: 100%;
+            letter-spacing: 1px;
+        }
+
+        /* Subtle glowing effect */
+        .register-btn:hover {
+            opacity: 0.9;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+            transform: scale(1.02);
+        }
+
+        .view-previous-btn {
+            background: cyan;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin: 5px;
+            width: 100%;
+        }
+
+        .view-previous-btn:hover {
+            transform: scale(1.1);
+            background: white;
+            color: black;
+        }
+
+        html, body {
+            height: 100%;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+   
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">About</a>
+    </div>
+
+    <div class="container">
+        <marquee><h1>Cultural Events</h1></marquee>
+
+        <div class="event">
+            <h2>Cygnus 2025</h2>
+            <p>Cygnus is the annual cultural extravaganza of IIIT Nuzvid. Experience an electrifying night of music, dance, drama, and entertainment featuring students' extraordinary talents.</p>
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Previous Events</button>
+            </div>
+        </div>
+
+        <div class="event">
+            <h2>Women's Day 2024</h2>
+            <p>Celebrating the strength and creativity of women, this event includes an inspiring art exhibition, live performances, and insightful discussions on women's achievements.</p>
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Previous Events</button>
+            </div>
+        </div>
+
+        <div class="event">
+            <h2>Cheerio Farewell</h2>
+            <p>The farewell event at IIIT Nuzvid is a heartfelt send-off for the graduating batch. Relive memories, enjoy farewell speeches, and groove to a night filled with nostalgia, music, and celebration.</p>
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Previous Events</button>
+            </div>
+        </div>
+
+        <div class="event">
+            <h2>Freshers 2024</h2>
+            <p>Welcome to a new beginning! The Freshers' event at IIIT Nuzvid is an exciting ice-breaking celebration filled with games, cultural performances, and interactive sessions to make new students feel at home.</p>
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Previous Events</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80 },
+                "size": { "value": 3 },
+                "move": { "speed": 2 },
+                "line_linked": { "enable": true, "color": "#808080" },
+                "color": { "value": "#ffffff" },
+                "interactivity": {
+                    "events": {
+                        "onhover": { "enable": true, "mode": "repulse" },
+                        "onclick": { "enable": true, "mode": "push" }
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultural Events - IIIT Nuzvid</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: black;
+            z-index: -1;
+        }
+
+        .navbar {
+            background: rgba(0, 255, 255, 0.2);
+            padding: 15px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar a {
+            color: cyan;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            min-height: 100vh;
+            padding: 100px 0 50px;
+        }
+
+        /* Updated Heading Styling */
+        .heading-container {
+            width: 100%;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .moving-text {
+            display: inline-block;
+            font-size: 36px;
+            font-weight: bold;
+            color: cyan;
+            text-shadow: 0 0 15px cyan;
+            animation: moveText 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes moveText {
+            from {
+                transform: translateX(-520px);
+            }
+            to {
+                transform: translateX(520px);
+            }
+        }
+
+        .event {
+            background: url('circuit-bg.jpg') no-repeat center center/cover;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .event h2 {
+            color: cyan;
+            text-shadow: 0 0 10px cyan;
+        }
+
+        .event p {
+            font-size: 16px;
+            color: white;
+        }
+
+        .button-container {
+            margin-top: 15px;
+        }
+
+        /* Cyberpunk-style Disabled Register Button */
+        .register-btn {
+            background: linear-gradient(45deg, #222, #444);
+            color: #666;
+            cursor: not-allowed;
+            opacity: 0.7;
+            border: 2px solid #00ffff55;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+            text-transform: uppercase;
+            width: 100%;
+            letter-spacing: 1px;
+        }
+
+        /* Subtle glowing effect */
+        .register-btn:hover {
+            opacity: 0.9;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+            transform: scale(1.02);
+        }
+
+        .view-previous-btn {
+            background: cyan;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin: 5px;
+            width: 100%;
+        }
+
+        .view-previous-btn:hover {
+            transform: scale(1.1);
+            background: white;
+            color: black;
+        }
+
+        html, body {
+            height: 100%;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">About</a>
+    </div>
+
+    <div class="container">
+        <!-- Updated Heading (No Marquee) -->
+        <div class="heading-container">
+            <h1 class="moving-text">Cultural Events</h1>
+        </div>
+
+        <div class="event">
+            <h2>Cygnus 2025</h2>
+            <p>Cygnus is the annual cultural extravaganza of IIIT Nuzvid. Experience an electrifying night of music, dance, drama, and entertainment featuring students' extraordinary talents.</p>
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Previous Events</button>
+            </div>
+        </div>
+
+        <div class="event">
+            <h2>Women's Day 2024</h2>
+            <p>Celebrating the strength and creativity of women, this event includes an inspiring art exhibition, live performances, and insightful discussions on women's achievements.</p>
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Previous Events</button>
+            </div>
+        </div>
+
+        <div class="event">
+            <h2>Cheerio Farewell</h2>
+            <p>The farewell event at IIIT Nuzvid is a heartfelt send-off for the graduating batch. Relive memories, enjoy farewell speeches, and groove to a night filled with nostalgia, music, and celebration.</p>
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Previous Events</button>
+            </div>
+        </div>
+
+        <div class="event">
+            <h2>Freshers 2024</h2>
+            <p>Welcome to a new beginning! The Freshers' event at IIIT Nuzvid is an exciting ice-breaking celebration filled with games, cultural performances, and interactive sessions to make new students feel at home.</p>
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Previous Events</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 60 },
+                "size": { "value": 2 },
+                "move": { "speed": 1.5 },
+                "line_linked": { "enable": true, "color": "#808080" },
+                "color": { "value": "#ffffff" },
                 "interactivity": {
                     "events": {
                         "onhover": { "enable": true, "mode": "repulse" },
