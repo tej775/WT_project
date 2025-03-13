@@ -3,200 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technozion - Cultural Events</title>
+    <title>Cultural Events - IIIT Nuzvid</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
     <style>
         body {
             font-family: 'Orbitron', sans-serif;
             margin: 0;
             padding: 0;
-            background: #09122C;
+            background: black;
             color: white;
-            /* overflow: hidden; */
+            overflow-x: hidden;
         }
-        .nav-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            background: rgba(0, 255, 255, 0.3);
-            padding: 15px;
-            gap: 20px;
-        }
+
         #particles-js {
-            position: absolute;
+            position: fixed;
             width: 100%;
             height: 100vh;
-            background: #09122C;
+            background: black;
+            z-index: -1;
         }
-        header {
+
+        .navbar {
+            background: rgba(0, 255, 255, 0.2);
+            padding: 15px 0;
             text-align: center;
-            font-size: 32px;
-            font-weight: bold;
-            padding: 60px 20px 20px;
-            z-index: 100;
-            /* background: rgba(0, 255, 255, 0.2); */
-            color: cyan;
-            text-shadow: 0 0 10px cyan;
-            margin-bottom: 0;
-            position: relative;
-            top:50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
         }
-        .nav-bar a {
-            color: white;
+
+        .navbar a {
+            color: cyan;
             text-decoration: none;
             font-size: 18px;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background 0.3s;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
         }
-        .nav-bar a:hover {
-            background: cyan;
-            color: black;
+
+        .navbar a:hover {
+            color: white;
         }
+
         .container {
             position: relative;
-            width: 80%;
-            margin: auto;
-            z-index: 10;
-            margin-top: 80px;
+            text-align: center;
+            min-height: 100vh;
+            padding: 100px 0 50px;
         }
-        .event {
-            display: flex;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            border: 2px solid cyan;
-            box-shadow: 0 0 10px cyan, inset 0 0 10px cyan;
-        }
-        .event:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px cyan, inset 0 0 15px cyan;
-        }
-        .event img {
-            width: 30%;
-            height: auto;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
-            margin-right: 20px;
-        }
-        .event-content {
-            flex: 1;
-        }
-        .button-group {
-            display: flex;
-            gap: 15px;
-        }
-        .register, .previous-events {
-            display: inline-block;
-            padding: 12px 18px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 16px;
-            transition: all 0.3s ease-in-out;
-            position: relative;
+
+        /* Updated Heading Styling */
+        .heading-container {
+            width: 100%;
+            text-align: center;
             overflow: hidden;
-            text-transform: uppercase;
-            border: 2px solid cyan;
-            background: transparent;
-            color: cyan;
+            position: relative;
+            padding: 20px 0;
         }
-        .register:hover, .previous-events:hover {
+
+        .moving-text {
+            display: inline-block;
+            font-size: 36px;
+            font-weight: bold;
+            color: cyan;
+            text-shadow: 0 0 15px cyan;
+            animation: moveText 15s ease-in-out infinite alternate;
+        }
+
+        @keyframes moveText {
+            from {
+                transform: translateX(-520px);
+            }
+            to {
+                transform: translateX(520px);
+            }
+        }
+
+        .event {
+            background: url('circuit-bg.jpg') no-repeat center center/cover;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .event h2 {
+            color: cyan;
+            text-shadow: 0 0 10px cyan;
+        }
+
+        .event p {
+            font-size: 16px;
+            color: white;
+        }
+
+        .button-container {
+            margin-top: 15px;
+        }
+
+        /* Cyberpunk-style Disabled Register Button */
+        .register-btn {
+            background: linear-gradient(45deg, #222, #444);
+            color: #666;
+            cursor: not-allowed;
+            opacity: 0.7;
+            border: 2px solid #00ffff55;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+            text-transform: uppercase;
+            width: 100%;
+            letter-spacing: 1px;
+        }
+
+        /* Subtle glowing effect */
+        .register-btn:hover {
+            opacity: 0.9;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+            transform: scale(1.02);
+        }
+
+        .view-previous-btn {
             background: cyan;
             color: black;
-            box-shadow: 0 0 10px cyan, 0 0 40px cyan;
-            transform: scale(1.05);
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin: 5px;
+            width: 100%;
         }
-        @media (max-width: 768px) {
-            .event {
-                flex-direction: column;
-                text-align: center;
-            }
-            .event img {
-                width: 100%;
-                margin: 0 0 15px 0;
-            }
-            .button-group {
-                flex-direction: column;
-                gap: 10px;
-            }
+
+        .view-previous-btn:hover {
+            transform: scale(1.1);
+            background: white;
+            color: black;
+        }
+
+        html, body {
+            height: 100%;
+            overflow-y: auto;
         }
     </style>
 </head>
 <body>
+
     <div id="particles-js"></div>
-    <nav class="nav-bar">
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
         <a href="#">Home</a>
-        <a href="#">Events</a>
-        <a href="#">Gallery</a>
-        <a href="#">Contact</a>
-    </nav>
-    <header>
-        <marquee  direction="left">Cultural Events</marquee></header>
-    <div class="container">
-        <div class="event">
-            <img src="music-festival.jpg" alt="Music Festival">
-            <div class="event-content">
-                <h2>Cygnus 2025</h2>
-                <p>Annual cultural extravaganza at IIIT Nuzvid.</p>
-                <p>Experience an electrifying night of music, dance, and entertainment.</p>
-                <div class="button-group">
-                    <a href="#" class="register">Register Now</a>
-                    <a href="#" class="previous-events">View Previous Events</a>
-                </div>
-            </div>
-        </div>
-        <div class="event">
-            <img src="music-festival.jpg" alt="Music Festival">
-            <div class="event-content">
-                <h2>Cygnus 2025</h2>
-                <p>Annual cultural extravaganza at IIIT Nuzvid.</p>
-                <p>Experience an electrifying night of music, dance, and entertainment.</p>
-                <div class="button-group">
-                    <a href="#" class="register">Register Now</a>
-                    <a href="#" class="previous-events">View Previous Events</a>
-                </div>
-            </div>
-        </div>
-        <div class="event">
-            <img src="music-festival.jpg" alt="Music Festival">
-            <div class="event-content">
-                <h2>Cygnus 2025</h2>
-                <p>Annual cultural extravaganza at IIIT Nuzvid.</p>
-                <p>Experience an electrifying night of music, dance, and entertainment.</p>
-                <div class="button-group">
-                    <a href="#" class="register">Register Now</a>
-                    <a href="#" class="previous-events">View Previous Events</a>
-                </div>
-            </div>
-        </div>
+        <a href="events.html">Events</a>
+        <a href="#">About</a>
     </div>
+
+    <div class="container">
+        <!-- Updated Heading (No Marquee) -->
+        <div class="heading-container">
+            <h1 class="moving-text">Technical Events</h1>
+        </div>
+
+        <div class="event">
+            <h2>Hackathon-X</h2>
+            <!-- <p>Cygnus is the annual cultural extravaganza of IIIT Nuzvid. Experience an electrifying night of music, dance, drama, and entertainment featuring students' extraordinary talents.</p> -->
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Problem statements</button>
+            </div>
+        </div>
+
+        <div class="event">
+            <h2>SIH-Hackathon</h2>
+            <!-- <p>Celebrating the strength and creativity of women, this event includes an inspiring art exhibition, live performances, and insightful discussions on women's achievements.</p> -->
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Problem statements</button>
+            </div>
+        </div>
+
+        <div class="event">
+            <h2>Techzite 2025</h2>
+            <!-- <p>The farewell event at IIIT Nuzvid is a heartfelt send-off for the graduating batch. Relive memories, enjoy farewell speeches, and groove to a night filled with nostalgia, music, and celebration.</p> -->
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Prevoius Events</button>
+            </div>
+        </div>
+
+        <div class="event">
+            <h2>Hackathon-Y</h2>
+            <!-- <p>Welcome to a new beginning! The Freshers' event at IIIT Nuzvid is an exciting ice-breaking celebration filled with games, cultural performances, and interactive sessions to make new students feel at home.</p> -->
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Problem statements</button>
+            </div>
+        </div>
+
+    </div>
+
     <script>
         particlesJS("particles-js", {
             "particles": {
                 "number": { "value": 100 },
                 "size": { "value": 3 },
-                "move": { "speed": 2 },
+                "move": { "speed": 2},
                 "line_linked": { "enable": true, "color": "#808080" },
-                "color": { "value": "#ffffff" }
-            },
-            "interactivity": {
-                "events": {
-                    "onhover": { "enable": false },
-                    "onclick": { "enable": true, "mode": "push" }
+                "color": { "value": "#ffffff" },
+                "interactivity": {
+                    "events": {
+                        "onhover": { "enable": true, "mode": "repulse" },
+                        "onclick": { "enable": true, "mode": "push" }
+                    }
                 }
             }
         });
     </script>
+
 </body>
 </html>
