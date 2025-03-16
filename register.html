@@ -253,7 +253,7 @@
         <!-- <p>8th - 10th Nov | Don't Miss the Future of Technology</p> -->
         <div class="register-form">
             <h3>Login Form</h3>
-            <form action="#" method="POST"  onsubmit="return validateForm()">
+            <form action="#" method="POST"  id="loginForm" onsubmit="return validateForm()">
                 <input type="text" name="name" id="name" placeholder="Full Name" required>
                 <input type="email" name="email" id="email" placeholder="Email Address" required>
                 <div class="password-container">
@@ -267,8 +267,14 @@
     <div id="customAlert" class="custom-alert"></div>
     <script>
         
-         document.getElementById("loginBtn").addEventListener("click", function() {
-            window.location.href = "Home.html"; // Replace with your target HTML file
+        
+
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission until validation passes
+            
+            if (validateForm()) {
+                window.location.href = "Home.html"; // Redirect after successful validation
+            }
         });
         function showAlert(message) {
             var alertBox = document.getElementById("customAlert");
