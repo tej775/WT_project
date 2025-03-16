@@ -1013,8 +1013,8 @@
     <div class="center-container">
         <h1>EVENTS</h1>
         <div class="button-container">
-            <button class="event-btn">TECHNICAL</button>
-            <button class="event-btn">CULTURAL</button>
+            <button class="event-btn" id="tech">TECHNICAL</button>
+            <button class="event-btn" id="culturals">CULTURAL</button>
         </div>
     </div>
 
@@ -1038,6 +1038,10 @@
 
     <!-- JavaScript -->
     <script>
+       
+        document.getElementById("culturals").addEventListener("click", function() {
+            window.location.href = "culturals.html"; // Replace with your target HTML file
+        });
         document.addEventListener("DOMContentLoaded", function () {
             if (typeof particlesJS !== "undefined") {
                 particlesJS("particles-js", {
@@ -1075,6 +1079,15 @@
             window.location.href = "recentevents.html";
         }
     });
+//  document.getElementById("tech").addEventListener("click", function() {
+//             alert("Button Clicked! Navigating...");
+//             window.location.href = "technical.html"; // Replace with your target HTML file
+//         });
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("JavaScript is running");
+});
+
+
 
 
 
