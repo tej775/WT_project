@@ -66,12 +66,6 @@
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
-        .register-form form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
         .register-form input {
             width: 90%;
             padding: 12px;
@@ -85,10 +79,6 @@
             transition: 0.3s;
             text-align: left;
             padding-left: 10px;
-        }
-        .register-form input:hover, .register-form input:focus {
-            background: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
         }
         .register-form button {
             background: white;
@@ -105,39 +95,29 @@
             background: #ddd;
             color: black;
         }
-        .intro-animation {
+        .spacecraft-container {
             position: absolute;
             top: 50%;
-            left: -200px;
-            width: 200px;
-            height: 200px;
-            background: url('https://cdn.pixabay.com/photo/2016/04/01/08/58/spaceship-1292814_1280.png') no-repeat center center/contain;
+            left: -300px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
             animation: moveSpacecraft 2s linear forwards;
             z-index: 50;
         }
+        .spacecraft {
+            width: 250px;
+            height: 150px;
+            background: url('https://cdn.pixabay.com/photo/2016/04/01/08/58/spaceship-1292814_1280.png') no-repeat center center/contain;
+        }
         .astronaut {
-            position: absolute;
-            top: 55%;
-            left: -220px;
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             background: url('https://cdn.pixabay.com/photo/2020/04/05/17/27/astronaut-5003583_1280.png') no-repeat center center/contain;
-            animation: moveAstronaut 2s linear forwards;
-            z-index: 51;
         }
         @keyframes moveSpacecraft {
             from {
-                left: -200px;
-                opacity: 1;
-            }
-            to {
-                left: 100%;
-                opacity: 0;
-            }
-        }
-        @keyframes moveAstronaut {
-            from {
-                left: -220px;
+                left: -300px;
                 opacity: 1;
             }
             to {
@@ -148,8 +128,10 @@
     </style>
 </head>
 <body>
-    <div class="intro-animation"></div>
-    <div class="astronaut"></div>
+    <div class="spacecraft-container">
+        <div class="spacecraft"></div>
+        <div class="astronaut"></div>
+    </div>
     <div id="particles-js"></div>
     <div class="hero">
         <h1>Welcome to Space</h1>

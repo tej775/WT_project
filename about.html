@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technozion - About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: white;
+            overflow: hidden;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background: black;
+        }
+        header {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            padding: 20px;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .about-container {
+            position: relative;
+            text-align: center;
+            padding: 60px 20px;
+            z-index: 10;
+        }
+        .about-container h1 {
+            font-size: 50px;
+            margin: 0;
+            color: cyan;
+            text-shadow: 0 0 10px cyan;
+        }
+        .about-container p {
+            font-size: 20px;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+        .section-title {
+            font-size: 30px;
+            margin-top: 50px;
+            text-transform: uppercase;
+            color: cyan;
+            font-weight: bold;
+            text-shadow: 0 0 5px cyan;
+        }
+        .about-section {
+            margin-top: 30px;
+            background: linear-gradient(145deg, #111, #222);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            transition: transform 0.3s ease-in-out;
+        }
+        .about-section:hover {
+            transform: scale(1.05);
+        }
+        .team-member {
+            margin-top: 20px;
+            padding: 15px;
+            background: #222;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .team-member h4 {
+            color: cyan;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+        .team-member p {
+            color: #aaa;
+            font-size: 16px;
+        }
+        footer {
+            margin-top: 50px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: cyan;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .about-container h1 {
+                font-size: 35px;
+            }
+            .about-container p {
+                font-size: 16px;
+            }
+            .section-title {
+                font-size: 25px;
+            }
+            .team-member {
+                flex-direction: column;
+                text-align: center;
+            }
+            .team-member img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <header>
+        Technozion - The Annual Tech Fest of NIT Warangal
+    </header>
+    <div class="about-container">
+        <h1>About Technozion</h1>
+        <p>Technozion is the premier technical fest of the National Institute of Technology (NIT) Warangal, offering a platform for students to showcase their skills and engage in futuristic technological innovations. It's a 3-day event that brings together tech enthusiasts, professionals, and students to explore, innovate, and compete in exciting competitions and workshops.</p>
+    </div>
+
+    <div class="about-section">
+        <h2 class="section-title">Mission & Vision</h2>
+        <p>Our mission is to provide a platform for students to connect, learn, and grow. Through workshops, competitions, and tech talks, we aim to inspire innovation and foster creativity in the fields of technology. Our vision is to make Technozion a globally recognized tech fest that encourages young minds to think beyond the conventional and shape the future.</p>
+    </div>
+
+    <div class="about-section">
+        <h2 class="section-title">Our Team</h2>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Team Member 1">
+            <h4>John Doe</h4>
+            <p>Event Coordinator</p>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Team Member 2">
+            <h4>Jane Smith</h4>
+            <p>Technical Lead</p>
+        </div>
+        <div class="team-member">
+            <img src="https://via.placeholder.com/100" alt="Team Member 3">
+            <h4>Sam Wilson</h4>
+            <p>Marketing Head</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Connect with us:</p>
+        <a href="https://www.facebook.com/technozion" target="_blank">Facebook</a>
+        <a href="https://twitter.com/technozion" target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/technozion" target="_blank">Instagram</a>
+        <a href="mailto:info@technozion.com">Email</a>
+    </footer>
+
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 100 },
+                "size": { "value": 3 },
+                "move": { "speed": 2 },
+                "line_linked": { "enable": true, "color": "#00ffff" },
+                "color": { "value": "#00ffff" },
+                "interactivity": {
+                    "events": {
+                        "onhover": { "enable": true, "mode": "repulse" },
+                        "onclick": { "enable": true, "mode": "push" }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
