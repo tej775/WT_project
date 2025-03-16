@@ -260,12 +260,16 @@
                 <input type="password" name="password" id="password" placeholder="Password" required>
                 <span class="toggle-password" onclick="togglePassword()"><i style="color:cyan" class="fa-regular fa-eye"></i></span>
             </div>
-                <button type="submit">Login</button>
+                <button type="submit" id="loginBtn">Login</button>
             </form>
         </div>
     </div>
     <div id="customAlert" class="custom-alert"></div>
     <script>
+        
+         document.getElementById("loginBtn").addEventListener("click", function() {
+            window.location.href = "Home.html"; // Replace with your target HTML file
+        });
         function showAlert(message) {
             var alertBox = document.getElementById("customAlert");
             alertBox.textContent = message;
