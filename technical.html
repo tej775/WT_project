@@ -199,7 +199,7 @@
             <!-- <p>The farewell event at IIIT Nuzvid is a heartfelt send-off for the graduating batch. Relive memories, enjoy farewell speeches, and groove to a night filled with nostalgia, music, and celebration.</p> -->
             <div class="button-container">
                 <button class="register-btn" disabled>Register Now</button>
-                <button class="view-previous-btn">View Prevoius Events</button>
+                <button class="view-previous-btn" id="tz-btn">View Prevoius Events</button>
             </div>
         </div>
 
@@ -215,6 +215,15 @@
     </div>
 
     <script>
+
+            // Tz button
+            let tzButton = document.getElementById("tz-btn");
+           
+                tzButton.addEventListener("click", function () {
+                    window.location.href = "subpage_tz.html";
+                });
+            
+        
         particlesJS("particles-js", {
             "particles": {
                 "number": { "value": 100 },
