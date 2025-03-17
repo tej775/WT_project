@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technozion - Home</title>
+    <title>Technozion - Gallery</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
@@ -20,6 +20,7 @@
             position: absolute;
             width: 100%;
             height: 100vh;
+            z-index: -1;
         }
         .navbar {
             position: fixed;
@@ -42,62 +43,34 @@
         .navbar a:hover {
             color: white;
         }
-        .hero {
-            position: relative;
+        .gallery-section {
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            z-index: 10;
+            padding: 80px 20px;
+            margin-top: 80px;
         }
-        .hero h1 {
-            font-size: 50px;
+        .gallery-section h2 {
             color: cyan;
             text-shadow: 0 0 10px cyan;
-        }
-        .cta-button {
-            background: cyan;
-            color: black;
-            padding: 10px 20px;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
-        .cta-button:hover {
-            transform: scale(1.05);
-        }
-        .events-section {
-            text-align: center;
-            padding: 50px;
-        }
-        .event-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px;
-            box-shadow: 0px 0px 10px cyan;
         }
         .image-gallery {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 20px;
             flex-wrap: wrap;
             padding: 50px;
             background: rgba(255, 255, 255, 0.1);
         }
         .image-gallery img {
+            display: block;
             width: 300px;
             height: auto;
             border-radius: 10px;
             box-shadow: 0 0 10px cyan;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease-in-out;
         }
         .image-gallery img:hover {
-            transform: scale(1.1);
+            transform: scale(1.2);
         }
         .footer {
             text-align: center;
@@ -110,51 +83,27 @@
 <body>
     <div id="particles-js"></div>
     <div class="navbar">
-        <a href="#">Home</a>
+        <a href="Home.html">Home</a>
         <a href="about.html">About</a>
         <a href="events.html">Events</a>
+       
         <a href="contact.html">Contact</a>
     </div>
-    <div class="hero">
-        <h1>Welcome to Eventara</h1>
-        <p>The Ultimate Tech Fest Awaits You!</p>
-        <a href="#events" class="cta-button">Explore Events</a>
-    </div>
-    <div id="events" class="events-section">
-        <h2>Upcoming Events</h2>
-        <div class="event-card">
-            <h3>AI & Robotics Workshop</h3>
-            <p>Learn the future of AI with hands-on experience.</p>
+    <div class="gallery-section">
+        <h2>Event Gallery</h2>
+        <div class="image-gallery">
+            <img src="tn_1 (1).jpg" alt="Event Image 1">
+            <img src="tn_12.jpg" alt="Event Image 2">
+            <img src="tn_10.jpg" alt="Event Image 3">
+            <img src="tn_15.jpg" alt="Event Image 4">
+            <img src="tn_3 (1).jpg" alt="Event Image 5">
+           
         </div>
-        <div class="event-card">
-            <h3>Hackathon 2024</h3>
-            <p>Compete with the best minds and innovate!</p>
-        </div>
-    </div>
-    <div class="image-gallery">
-        <img src="tn_1 (1).jpg" alt="Event Image 1">
-        <img src="tn_1 (2).jpg" alt="Event Image 2">
-        <img src="tn_1.jpg" alt="Event Image 3">
     </div>
     <div class="footer">
         <p>&copy; 2024 Technozion. All rights reserved.</p>
     </div>
     <script>
-        particlesJS("particles-js", {
-            "particles": {
-                "number": { "value": 100 },
-                "size": { "value": 3 },
-                "move": { "speed": 2 },
-                "line_linked": { "enable": true, "color": "#808080" },
-                "color": { "value": "#ffffff" },
-                "interactivity": {
-                    "events": {
-                        "onhover": { "enable": true, "mode": "repulse" },
-                        "onclick": { "enable": true, "mode": "push" }
-                    }
-                }
-            }
-        });
     </script>
 </body>
 </html>
