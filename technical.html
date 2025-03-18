@@ -233,6 +233,15 @@
     </div>
 
     <script>
+ 
+ let prev_btn = document.getElementsByClassName("view-previous-btn");
+
+Array.from(prev_btn).forEach(button => {
+    button.addEventListener("click", function () {
+        window.location.href = "problem_sta.html";
+    });
+});
+
 
             // Tz button
             let tzButton = document.getElementById("tz-btn");
