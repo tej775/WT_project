@@ -184,7 +184,7 @@
             <p>Cygnus is the annual cultural extravaganza of IIIT Nuzvid. Experience an electrifying night of music, dance, drama, and entertainment featuring students' extraordinary talents.</p>
             <div class="button-container">
                 <button class="register-btn" disabled>Register Now</button>
-                <button class="view-previous-btn">View Previous Events</button>
+                <button class="view-previous-btn" id="cyg-btn">View Previous Events</button>
             </div>
         </div>
 
@@ -193,7 +193,7 @@
             <p>Celebrating the strength and creativity of women, this event includes an inspiring art exhibition, live performances, and insightful discussions on women's achievements.</p>
             <div class="button-container">
                 <button class="register-btn" disabled>Register Now</button>
-                <button class="view-previous-btn">View Previous Events</button>
+                <button class="view-previous-btn" id="wm-btn">View Previous Events</button>
             </div>
         </div>
 
@@ -202,7 +202,7 @@
             <p>The farewell event at IIIT Nuzvid is a heartfelt send-off for the graduating batch. Relive memories, enjoy farewell speeches, and groove to a night filled with nostalgia, music, and celebration.</p>
             <div class="button-container">
                 <button class="register-btn" disabled>Register Now</button>
-                <button class="view-previous-btn">View Previous Events</button>
+                <button class="view-previous-btn" id="che-btn">View Previous Events</button>
             </div>
         </div>
 
@@ -211,13 +211,36 @@
             <p>Welcome to a new beginning! The Freshers' event at IIIT Nuzvid is an exciting ice-breaking celebration filled with games, cultural performances, and interactive sessions to make new students feel at home.</p>
             <div class="button-container">
                 <button class="register-btn" disabled>Register Now</button>
-                <button class="view-previous-btn">View Previous Events</button>
+                <button class="view-previous-btn" id="jashn-btn">View Previous Events</button>
             </div>
         </div>
 
     </div>
 
     <script>
+         let cygButton = document.getElementById("cyg-btn");
+           
+         cygButton.addEventListener("click", function () {
+               window.location.href = "subpage_cygnus.html";
+           });
+
+           let jashnButton = document.getElementById("jashn-btn");
+           
+           jashnButton.addEventListener("click", function () {
+               window.location.href = "subpage_jashn.html";
+           });
+
+           let cheButton = document.getElementById("che-btn");
+           
+           cheButton.addEventListener("click", function () {
+               window.location.href = "subpage_che.html";
+           });
+
+           let wmButton = document.getElementById("wm-btn");
+           
+           wmButton.addEventListener("click", function () {
+               window.location.href = "subpage_wday.html";
+           });
         particlesJS("particles-js", {
             "particles": {
                 "number": { "value": 80 },
