@@ -208,7 +208,7 @@
             <!-- <p>Celebrating the strength and creativity of women, this event includes an inspiring art exhibition, live performances, and insightful discussions on women's achievements.</p> -->
             <div class="button-container">
                 <button class="register-btn" disabled>Register Now</button>
-                <button class="view-previous-btn">View Problem statements</button>
+                <button class="view-previous-btn" id="sih-btn" >View Problem statements</button>
             </div>
         </div>
 
@@ -249,7 +249,12 @@ Array.from(prev_btn).forEach(button => {
                 tzButton.addEventListener("click", function () {
                     window.location.href = "subpage_tz.html";
                 });
-            
+
+                let Button = document.getElementById("sih-btn");
+           
+           Button.addEventListener("click", function () {
+               window.location.href = "problem_statement.html";
+           });
                 particlesJS("particles-js", {
             "particles": {
                 "number": { "value": 100 },

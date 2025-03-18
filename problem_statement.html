@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technozion - Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #09122C;
+            color: white;
+            overflow-x: hidden;
+            display: grid;
+            height: 100vh;
+        }
+       
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            z-index: 1000;
+            box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+        .navbar a {
+            color: cyan;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+        .navbar a:hover {
+            background: rgba(0, 255, 255, 0.2);
+            color: white;
+            box-shadow: 0 0 10px cyan;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 0;
+            }
+        }
+       .body{
+            margin-top:150px;
+            text-align: center;
+            align-self: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .problem {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 0 10px cyan;
+            text-align: left;
+        }
+       
+        .footer {
+           align-self:flex-end;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <a href="Home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="body">
+        <h2>Full-Stack Development Challenges</h2>
+
+        <div class="problem">
+            <h3>1. Smart Event Registration System</h3>
+            <p>Build a platform where users can register for events, but the system should use AI-based recommendations to suggest the best event based on their interests and past participation.</p>
+        </div>
+
+        <div class="problem">
+            <h3>2. Dynamic Role-Based Dashboard</h3>
+            <p>Create a dashboard where different users (Admin, Event Organizer, Student) see different UI components based on their role, ensuring secure and dynamic content rendering.</p>
+        </div>
+
+        <div class="problem">
+            <h3>3. Interactive Resume Builder</h3>
+            <p>Develop a web app where users can generate resumes with live preview, drag-and-drop sections, and export as PDF, storing user templates for future edits.</p>
+        </div>
+
+        <div class="problem">
+            <h3>4. College Networking Platform</h3>
+            <p>Design a social platform for students to connect, share projects, and collaborate in real time using WebSockets for instant messaging and notifications.</p>
+        </div>
+
+        <div class="problem">
+            <h3>5. Automated Certificate Generator</h3>
+            <p>Develop a system where event organizers can generate personalized participation certificates with unique QR codes for verification, accessible via a database.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Technozion. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
