@@ -165,34 +165,70 @@
             <h3>AI & Robotics Workshop</h3>
             <p>Learn the future of AI with hands-on experience.</p>
         </div>
-        <div class="event-card">
-            <h3>Hackathon 2024</h3>
-            <p>Compete with the best minds and innovate!</p>
-        </div>
-    </div>
 
-    
-    <div class="slider-container">
-        <div class="image-slider">
-            <img src="tech1.jpg" alt="Event Image 1">
-            <img src="cyg_3.webp" alt="Event Image 2">
-            <img src="tn_1.jpg" alt="Event Image 3">
-            <img src="tech3.jpg" alt="Event Image 4">
-            <img src="tn_4 (1).jpg" alt="Event Image 5">
-
-           
-            <img src="tech1.jpg" alt="Event Image 1">
-            <img src="cyg_3.webp" alt="Event Image 2">
-            <img src="tn_1.jpg" alt="Event Image 3">
-            <img src="tech3.jpg" alt="Event Image 4">
-            <img src="tn_4 (1).jpg" alt="Event Image 5">
+        <div class="event">
+            <h2>Cygnus 2025</h2>
+            <p>Cygnus is the annual cultural extravaganza of IIIT Nuzvid. Experience an electrifying night of music, dance, drama, and entertainment featuring students' extraordinary talents.</p>
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Previous Events</button>
+            </div>
         </div>
-    </div>
+
+        <div class="event">
+            <h2>Women's Day 2024</h2>
+            <p>Celebrating the strength and creativity of women, this event includes an inspiring art exhibition, live performances, and insightful discussions on women's achievements.</p>
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Previous Events</button>
+            </div>
+        </div>
+
+        <div class="event">
+            <h2>Cheerio Farewell</h2>
+            <p>The farewell event at IIIT Nuzvid is a heartfelt send-off for the graduating batch. Relive memories, enjoy farewell speeches, and groove to a night filled with nostalgia, music, and celebration.</p>
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Previous Events</button>
+            </div>
+        </div>
+
+        <div class="event">
+            <h2>Freshers 2024</h2>
+            <p>Welcome to a new beginning! The Freshers' event at IIIT Nuzvid is an exciting ice-breaking celebration filled with games, cultural performances, and interactive sessions to make new students feel at home.</p>
+            <div class="button-container">
+                <button class="register-btn" disabled>Register Now</button>
+                <button class="view-previous-btn">View Previous Events</button>
+            </div>
+        </div>
 
     <div class="footer">
         <p>&copy; 2024 Technozion. All rights reserved.</p>
     </div>
     <script>
+         let cygButton = document.getElementById("cyg-btn");
+           
+         cygButton.addEventListener("click", function () {
+               window.location.href = "subpage_cygnus.html";
+           });
+
+           let jashnButton = document.getElementById("jashn-btn");
+           
+           jashnButton.addEventListener("click", function () {
+               window.location.href = "subpage_jashn.html";
+           });
+
+           let cheButton = document.getElementById("che-btn");
+           
+           cheButton.addEventListener("click", function () {
+               window.location.href = "subpage_che.html";
+           });
+
+           let wmButton = document.getElementById("wm-btn");
+           
+           wmButton.addEventListener("click", function () {
+               window.location.href = "subpage_wday.html";
+           });
         particlesJS("particles-js", {
             "particles": {
                 "number": { "value": 100 },

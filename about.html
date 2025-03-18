@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,26 +19,24 @@
             position: absolute;
             width: 100%;
             height: 100vh;
-            /* background: black; */
-            background:rgb(33, 53, 85);
-            background:#09122C;
-            /* background:rgb(7, 79, 87); */
-        }
-        header {
-            position: absolute;
-            width: 100%;
-            text-align: center;
-            font-size: 32px;
-            font-weight: bold;
-            padding: 20px;
-            z-index: 10;
-            background: rgba(0, 0, 0, 0.8);
+            background: #09122C;
         }
         .about-container {
             position: relative;
             text-align: center;
             padding: 60px 20px;
             z-index: 10;
+        }
+        .typing-text {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid cyan;
+            width: 0;
+            animation: blink 0.8s infinite;
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
         }
         .about-container h1 {
             font-size: 50px;
@@ -51,129 +49,46 @@
             margin-top: 10px;
             line-height: 1.6;
         }
-        .section-title {
-            font-size: 30px;
-            margin-top: 50px;
-            text-transform: uppercase;
-            color: cyan;
-            font-weight: bold;
-            text-shadow: 0 0 5px cyan;
-        }
-        .about-section {
-            margin-top: 30px;
-            background: linear-gradient(145deg, #111, #222);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-            transition: transform 0.3s ease-in-out;
-        }
-        .about-section:hover {
-            transform: scale(1.05);
-        }
-        .team-member {
-            margin-top: 20px;
-            padding: 15px;
-            background: #222;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-        }
-        .team-member img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        .team-member h4 {
-            color: cyan;
-            margin-bottom: 5px;
-            font-size: 20px;
-        }
-        .team-member p {
-            color: #aaa;
-            font-size: 16px;
-        }
-        footer {
-            margin-top: 50px;
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
             background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            text-align: center;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            z-index: 1000;
         }
-        footer a {
+        .navbar a {
             color: cyan;
             text-decoration: none;
-            margin: 0 10px;
             font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
         }
-        footer a:hover {
-            text-decoration: underline;
+        .navbar a:hover {
+            color: white;
         }
-        @media (max-width: 768px) {
-            .about-container h1 {
-                font-size: 35px;
-            }
-            .about-container p {
-                font-size: 16px;
-            }
-            .section-title {
-                font-size: 25px;
-            }
-            .team-member {
-                flex-direction: column;
-                text-align: center;
-            }
-            .team-member img {
-                width: 80px;
-                height: 80px;
-            }
-        }
-        
     </style>
 </head>
+
 <body>
+
     <div id="particles-js"></div>
-    <header>
-        
-    </header>
+    <div class="navbar">
+        <a href="Home.html">Home</a>
+        <a href="#">About</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+    </div>
     <div class="about-container">
-        <h1>About Eventara </h1><br><br>
-        <p>Welcome to Eventara, the ultimate destination for students to explore, experience, and excel through exciting events!
-
-            We are more than just an event management platform—we are a thriving hub where technology meets culture, and where innovation meets celebration. Whether you’re a tech enthusiast eager to showcase your skills or a culture lover ready to shine on stage, we’ve got the perfect event for you!</p>
+        <h1 id="typing-heading">About Eventara</h1><br><br>
+        <p id="typing-paragraph">
+            Welcome to Eventara, the ultimate destination for students to explore, experience, and excel through exciting events!
+            We are more than just an event management platform—we are a thriving hub where technology meets culture, and where innovation meets celebration.
+        </p>
     </div>
-
-    <div class="about-section">
-        <h2 class="section-title">Mission & Vision</h2>
-        <p>At Eventara, we bring together students from diverse backgrounds, offering them a seamless way to discover, register, and participate in a wide range of technical and cultural events. Our platform ensures smooth event management, easy registrations, and an unforgettable experience for every participant.
-
-            Join us in making every event bigger, better, and more memorable. This is your stage, your challenge, and your celebration—be part of the experience!</p>
-    </div>
-
-    <div class="about-section">
-        <h2 class="section-title">Our Team</h2>
-        <div class="team-member">
-            <img src="https://via.placeholder.com/100" alt="Team Member 1">
-            <h4>John Doe</h4>
-            <p>Event Coordinator</p>
-        </div>
-        <div class="team-member">
-            <img src="https://via.placeholder.com/100" alt="Team Member 2">
-            <h4>Jane Smith</h4>
-            <p>Technical Lead</p>
-        </div>
-        <div class="team-member">
-            <img src="https://via.placeholder.com/100" alt="Team Member 3">
-            <h4>Sam Wilson</h4>
-            <p>Marketing Head</p>
-        </div>
-    </div>
-
-    <footer>
-        <p>Connect with us:</p>
-        <a href="https://www.facebook.com/technozion" target="_blank">Facebook</a>
-        <a href="https://twitter.com/technozion" target="_blank">Twitter</a>
-        <a href="https://www.instagram.com/technozion" target="_blank">Instagram</a>
-        <a href="mailto:info@technozion.com">Email</a>
-    </footer>
 
     <script>
         particlesJS("particles-js", {
@@ -191,9 +106,48 @@
                 }
             }
         });
+
+    
+
+        // Keyboard typing sound
+        const typingSound = new Audio('typing.mp3');
+      
+
+
+        function typeEffect(element, text, speed) {
+            let i = 0;
+            function typing() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    if (text.charAt(i) !== ' ') { // Play sound only for non-space characters
+                        typingSound.currentTime = 0;
+                        typingSound.play();
+                    }
+                    i++;
+                    setTimeout(typing, speed);
+                } else {
+                    element.style.borderRight = "none";
+                }
+            }
+            typing();
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let heading = document.getElementById("typing-heading");
+            let paragraph = document.getElementById("typing-paragraph");
+            let headingText = heading.innerText;
+            let paragraphText = paragraph.innerText;
+            
+            heading.innerText = "";
+            paragraph.innerText = "";
+            
+            typeEffect(heading, headingText, 100);
+            setTimeout(() => { typeEffect(paragraph, paragraphText, 50); }, 1500);
+        });
     </script>
 </body>
 </html>
+
 
 
 
