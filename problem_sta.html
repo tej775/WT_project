@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -89,6 +89,144 @@
         <p>&copy; 2025 Eventara. All rights reserved.</p>
     </div>
     <script>
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technozion - Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #09122C;
+            color: white;
+            overflow-x: hidden;
+            display: grid;
+            height: 100vh;
+        }
+       
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            z-index: 1000;
+            box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+        .navbar a {
+            color: cyan;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+        .navbar a:hover {
+            background: rgba(0, 255, 255, 0.2);
+            color: white;
+            box-shadow: 0 0 10px cyan;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 0;
+            }
+        }
+       
+       .body {
+            margin-top: 150px;
+            text-align: center;
+            align-self: center;
+        }
+
+        .typing-text {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid cyan;
+            width: 0;
+            animation: blink 0.8s infinite;
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+       
+        .footer {
+            align-self: flex-end;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <a href="Home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="body">
+        <span id="typing-text"></span>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Eventara. All rights reserved.</p>
+    </div>
+
+    <script>
+        // Typing sound effect
+        const typingSound = new Audio('typing.mp3');
+
+        function typeEffect(element, text, speed) {
+            let i = 0;
+            function typing() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    if (text.charAt(i) !== ' ') { // Play sound only for non-space characters
+                        typingSound.currentTime = 0;
+                        typingSound.play();
+                    }
+                    i++;
+                    setTimeout(typing, speed);
+                } else {
+                    element.style.borderRight = "none";
+                }
+            }
+            typing();
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            let textElement = document.getElementById("typing-text");
+            let text = "No data as of now";
+            
+            textElement.innerText = "";
+            typeEffect(textElement, text, 100);
+        });
     </script>
 </body>
 </html>
